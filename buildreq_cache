@@ -1,0 +1,10 @@
+1.20
+perl(Crypt::DH::GMP)
+perl(HTML::Parser)
+perl(HTTP::Headers::Util)
+perl(HTTP::Message)
+perl(HTTP::Request)
+perl(HTTP::Status)
+perl(URI)
+perl(URI::Escape)
+perl(XML::Simple)
