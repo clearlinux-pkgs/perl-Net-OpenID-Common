@@ -83,14 +83,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/Common.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/Extension.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/Extension/SimpleRegistration.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/ExtensionMessage.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/IndirectMessage.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/URIFetch.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/Yadis.pm
-/usr/lib/perl5/vendor_perl/5.28.1Net/OpenID/Yadis/Service.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/Common.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/Extension.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/Extension/SimpleRegistration.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/ExtensionMessage.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/IndirectMessage.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/URIFetch.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/Yadis.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenID/Yadis/Service.pm
 
 %files dev
 %defattr(-,root,root,-)
