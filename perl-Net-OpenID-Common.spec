@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenID-Common
 Version  : 1.20
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Summary  : 'Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server'
@@ -31,6 +31,7 @@ Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server
 Summary: dev components for the perl-Net-OpenID-Common package.
 Group: Development
 Provides: perl-Net-OpenID-Common-devel = %{version}-%{release}
+Requires: perl-Net-OpenID-Common = %{version}-%{release}
 
 %description dev
 dev components for the perl-Net-OpenID-Common package.
