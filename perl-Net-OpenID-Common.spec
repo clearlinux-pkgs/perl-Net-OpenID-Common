@@ -4,13 +4,14 @@
 #
 Name     : perl-Net-OpenID-Common
 Version  : 1.20
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Summary  : 'Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Net-OpenID-Common-license = %{version}-%{release}
+Requires: perl-Net-OpenID-Common-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Crypt::DH::GMP)
 BuildRequires : perl(HTML::Parser)
@@ -45,14 +46,24 @@ Group: Default
 license components for the perl-Net-OpenID-Common package.
 
 
+%package perl
+Summary: perl components for the perl-Net-OpenID-Common package.
+Group: Default
+Requires: perl-Net-OpenID-Common = %{version}-%{release}
+
+%description perl
+perl components for the perl-Net-OpenID-Common package.
+
+
 %prep
 %setup -q -n Net-OpenID-Common-1.20
+cd %{_builddir}/Net-OpenID-Common-1.20
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -62,7 +73,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -71,7 +82,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Net-OpenID-Common
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Net-OpenID-Common/LICENSE
+cp %{_builddir}/Net-OpenID-Common-1.20/LICENSE %{buildroot}/usr/share/package-licenses/perl-Net-OpenID-Common/fa7342adb982b2bc5de778c2a7124d6389d05c1a
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -84,14 +95,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/Common.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/Extension.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/Extension/SimpleRegistration.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/ExtensionMessage.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/IndirectMessage.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/URIFetch.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/Yadis.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenID/Yadis/Service.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -106,4 +109,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Net-OpenID-Common/LICENSE
+/usr/share/package-licenses/perl-Net-OpenID-Common/fa7342adb982b2bc5de778c2a7124d6389d05c1a
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/Common.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/Extension.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/Extension/SimpleRegistration.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/ExtensionMessage.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/IndirectMessage.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/URIFetch.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/Yadis.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenID/Yadis/Service.pm
