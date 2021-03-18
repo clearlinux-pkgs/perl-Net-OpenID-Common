@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenID-Common
 Version  : 1.20
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Summary  : 'Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server'
@@ -113,11 +113,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/Common.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/Extension.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/Extension/SimpleRegistration.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/ExtensionMessage.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/IndirectMessage.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/URIFetch.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/Yadis.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenID/Yadis/Service.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/Common.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/Extension.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/Extension/SimpleRegistration.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/ExtensionMessage.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/IndirectMessage.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/URIFetch.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/Yadis.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/OpenID/Yadis/Service.pm
