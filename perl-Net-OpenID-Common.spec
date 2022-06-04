@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenID-Common
 Version  : 1.20
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Summary  : 'Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server'
@@ -113,11 +113,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/Common.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/Extension.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/Extension/SimpleRegistration.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/ExtensionMessage.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/IndirectMessage.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/URIFetch.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/Yadis.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Net/OpenID/Yadis/Service.pm
+/usr/lib/perl5/*
