@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenID-Common
 Version  : 1.20
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WR/WROG/Net-OpenID-Common-1.20.tar.gz
 Summary  : 'Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server'
